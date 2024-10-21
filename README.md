@@ -1,6 +1,6 @@
 # Project: redux-toolkit-counter
 
-### [Site link](https://redux-toolkit-counter.netlify.app/)
+### [Site link](https://redux-toolkit-counters.netlify.app/)
 
 Layout support desktop and mobile version
 
