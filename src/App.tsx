@@ -1,11 +1,11 @@
 import React from 'react';
 import Counter from './components/Counter';
 import { Provider } from 'react-redux';
-import { store } from './state/store';
+import { store } from './redux/store';
+import './index.css';
 
 const App = () => (
   <Provider store={store}>
-    <h2>Title</h2>
     <Counter />
   </Provider>
 );

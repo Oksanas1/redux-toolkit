@@ -16,6 +16,13 @@ module.exports = (_, argv) => {
           exclude: /node_modules/,
           use: ['babel-loader'],
         },
+        {
+          test: /.s?css$/,
+          use: [
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            'css-loader',
+          ],
+        },
       ],
     },
     resolve: {
@@ -26,6 +33,7 @@ module.exports = (_, argv) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
+        scriptLoading: 'blocking',
       }),
     ],
     devServer: {
@@ -38,6 +46,14 @@ module.exports = (_, argv) => {
 
   if (!isProduction) {
     config.plugins.push(new webpack.HotModuleReplacementPlugin());
+  }
+
+  if (isProduction) {
+    config.plugins.push(
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+      }),
+    );
   }
 
   return config;

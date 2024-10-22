@@ -1,4 +1,4 @@
-# Project: redux-toolkit-counter
+# Project: Redux Toolkit Counter
 
 ### [Site link](https://redux-toolkit-counters.netlify.app/)
 
