@@ -41,3 +41,7 @@ body {
   transition: border-color 0.25s;
   color: #ffffff;
 }
+
+.counter__btn:hover {
+  border: 1px solid #2776cf;
+}
